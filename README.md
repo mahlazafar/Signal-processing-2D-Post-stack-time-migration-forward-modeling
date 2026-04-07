@@ -65,30 +65,38 @@ The core of this seismic imaging framework is the ability to collapse diffractio
 
 ### 1. Model Geometry & Velocity Field
 The initial structural model consists of three primary reflectors: Sinusoidal, Flat, and Dipping layers.
-![Model Geometry](images/1.png)
+![Model Geometry](images/2.png)
 
 ### 2. Ray Tracing Analysis
 Normal-incidence rays were traced to understand the wave propagation paths.
-![Ray Tracing](images/2.png)
+![Ray Tracing](images/5.png)
 
 ### 3. Zero-Offset Section (Unmigrated)
 The exploding reflector model results in complex diffraction patterns and overlapping energy.
-![Zero-Offset Data](images/3.png)
+![Zero-Offset Data](images/6.png)
 
 ### 4. Migration Results (Time vs. Depth)
 Below is the comparison between the processed sections.
-| Post-Stack Time Migration (PSTM) | Kirchhoff Depth Migration (KDM) |
+| Post-Stack Time Migration (PSTM) | Post-Stack Depth Migration (PSDM) |
 | :---: | :---: |
-| ![PSTM](images/4.png) | ![KDM](images/5.png) |
+| ![PSTM](images/7.png) | ![PSDM](images/5.png) |
+
+
 ## 💡 Key Insights & Concluding Remarks
 
-Based on the numerical simulations and the final comparative analysis, the following technical conclusions were reached:
+1. **The Exploding Reflector Model (ERM) vs. Zero-Offset Mapping:**
+   To simulate the seismic section, we utilized two fundamental concepts as illustrated in the provided figures:
+   ![exploding reflector model](images/1.png)
+   * **(a) Exploding Reflector Model:** In this theoretical approach, the reflectors "explode" at $t=0$. The wave travels only **upward** to the surface. To compensate for the one-way travel time, we use **half the true medium velocity** ($V/2$).
+   * **(b) Zero-Offset Model:** This represents the actual acquisition geometry where a source and receiver are co-located. The recorded time is the **two-way travel time** (downward + upward), using the **full velocity** of the medium.
+   * *Conclusion:* Our simulation successfully maps the complex diffraction patterns by honoring these wave propagation physics.
 
-* **Diffraction Resolution:** The implementation of the **Exploding Reflector Model** effectively demonstrated the "bow-tie" effect and overlapping diffractions caused by complex subsurface geometries (as seen in the Sinusoidal layer).
-* **Time vs. Depth Limitation:** While **Post-Stack Time Migration (PSTM)** successfully collapsed diffraction hyperbolas and improved the structural image, it remains limited to the time domain. For accurate geological mapping, a robust velocity model is required to perform **Depth Migration (KDM)**.
-* **Structural Fidelity:** Kirchhoff Migration proved highly effective in attenuating distortions and relocating dipping reflectors to their true spatial positions, which is critical for identifying structural traps.
-* **Future Enhancements:** To further improve results, especially in areas with strong lateral velocity variations, implementing **Pre-Stack Migration** and **Velocity Model Iteration** would be the next logical step to achieve a higher-fidelity subsurface image.
+2. **Diffraction Resolution:** The implementation effectively demonstrated the "bow-tie" effect and overlapping diffractions caused by complex subsurface geometries, particularly in the Sinusoidal layer.
+
+3. **Time vs. Depth Limitation:** While **Post-Stack Time Migration (PSTM)** successfully collapsed diffraction hyperbolas, it remains in the time domain. For accurate structural interpretation, **Post-Stack Depth Migration (PSDM)** is required to transform the image into the depth domain (meters).
+
+4. **Future Enhancements:** Implementing **Pre-Stack Migration** and iterative velocity analysis would be the next step to handle strong lateral velocity variations more accurately.
 ---
 
 ## 📧 Contact
-**Mahla Zafaryazdi** - [Your Email Address] - [Your LinkedIn/Portfolio Link]
+**Mahla Zafaryazdi Mohajer** - [mahlazafar8@gmail.com| mmphajer25@ku.edu.tr | mahla.zafar@aut.ac.ir] 
