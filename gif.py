@@ -30,7 +30,7 @@ try:
 
     if len(images) == len(filenames):
         print(f"🎬 Creating GIF: {output_gif}...")
-        imageio.mimsave(output_gif, images, duration=2000, loop=0)
+        imageio.mimsave(output_gif, images, duration=6000, loop=0)
         print("🚀 SUCCESS: GIF created successfully in the images folder!")
     else:
         print("⚠️ Could not create GIF. Please check the file names or paths.")

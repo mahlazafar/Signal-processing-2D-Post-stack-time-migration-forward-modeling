@@ -48,7 +48,7 @@ Migration effectively focuses seismic energy, transforming uninterpretable time 
 | Post-Stack Time Migration (PSTM) |  Post-Stack Depth Migration (KDM) |
 | :---: | :---: |
 | *Structural positioning in **Seconds*** | *Structural map in **Meters*** |
-| ![PSTM](images/7.png) | ![KDM](images/10.png) |
+| ![PSTM](images/7.png) | ![PSDM](images/10.png) |
 ## 📊 Dynamic Migration Workflow Analysis
 
 The core of this seismic imaging framework is the ability to collapse diffraction energy and relocate reflections to their true spatial coordinates. The animation below demonstrates the step-by-step transition of the seismic data:
@@ -89,9 +89,7 @@ Below is the comparison between the processed sections.
 reflectors (right) (Claerbout, 1985).
 
 
-*Figure 1: Exploding reflector model showing exploding reflector modelSeismic Data Analysis: Processing, Inversion, and Interpretation of Seismic Data. Society of Exploration Geophysicists, Yılmaz, Ö., 2002), Geometry of zero-offset recording(left), and hypothetical simulation of the zero-offset experiment using exploding
-reflectors (right) (Claerbout, 1985).
-*
+
    ![exploding reflector model](images/9.png)
    * **(a) Exploding Reflector Model:** In this theoretical approach, the reflectors "explode" at $t=0$. The wave travels only **upward** to the surface. To compensate for the one-way travel time, we use **half the true medium velocity** ($V/2$).
    * **(b) Zero-Offset Model:** This represents the actual acquisition geometry where a source and receiver are co-located. The recorded time is the **two-way travel time** (downward + upward), using the **full velocity** of the medium.
