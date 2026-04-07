@@ -1,23 +1,22 @@
 # 2D Seismic Forward Modeling and Post-Stack Time Migration
 ### Integrated Framework for Structural Imaging and Signal Analysis
-**Author:** Mahla Zafaryazdi
+**Author:** Mahla Zafaryazdi Mohajer
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python: 3.x](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
 [![Field: Geophysics](https://img.shields.io/badge/Field-Geophysics-green.svg)]()
+[![Topic: Signal Processing](https://img.shields.io/badge/Topic-Signal_Processing-orange.svg)]()
+[![Area: Imaging Science](https://img.shields.io/badge/Area-Imaging_Science-red.svg)]()
 
-This repository provides a high-fidelity numerical simulation of seismic wave propagation and imaging. It implements the full seismic pipeline—from synthetic velocity model building to advanced **Post-Stack Time Migration (PSTM)** and **Kirchhoff Depth Migration (KDM)**—using Python-based computational tools.
+This repository provides a high-fidelity numerical simulation of seismic wave propagation and image processing. This repository features a comprehensive seismic processing workflow, covering initial synthetic velocity modeling, wave propagation simulation, and advanced depth imaging techniques.**Post-Stack Time Migration (PSTM)** and **Post-Stack Depth Migration (PSDM)**—using Python-based computational tools.
 
 ---
 
 ## 🛑 Problem Statement: The Challenge of Subsurface Imaging
 
-In seismic exploration, raw data recorded at the surface does not provide a true map of the subsurface. The primary challenge, addressed in this project, is **Spatial Aliasing and Diffraction Overlap**.
+In seismic exploration, raw data recorded at the surface does not provide a true map of the subsurface. The primary challenge is the Geometric Distortion of Dipping Reflectors and complex structures and also the presence of Diffraction Hyperbolas caused by subsurface discontinuities."**.
 
-When a seismic wave hits a complex boundary (folded, dipping, or discontinuous), it creates **Diffraction Hyperbolas**. As shown in the image below (from Chapter 4, Yilmaz), these hyperbolas obscure the true location, dip, and spatial resolution of reflectors, making structural interpretation impossible without advanced processing.
-
-![Diffraction Hyperbolas in Seismic Data](images/diffractions.png)
-*Figure 1: Exploding reflector model showing diffraction hyperbolas (top) overlapping at the surface (bottom).*
+When a seismic wave hits a complex boundary (folded, dipping, or discontinuous), it creates **Diffraction Hyperbolas**. 
 
 This project focuses on **Migration**: a crucial signal processing technique that collapses these hyperbolas and relocates seismic energy to its true spatial $(x, z)$ origin.
 
@@ -86,6 +85,13 @@ Below is the comparison between the processed sections.
 
 1. **The Exploding Reflector Model (ERM) vs. Zero-Offset Mapping:**
    To simulate the seismic section, we utilized two fundamental concepts as illustrated in the provided figures:
+   As shown in the image below (Seismic Data Analysis: Processing, Inversion, and Interpretation of Seismic Data. Society of Exploration Geophysicists, Yılmaz, Ö., 2002), Geometry of zero-       offset recording(left), and hypothetical simulation of the zero-offset experiment using exploding
+reflectors (right) (Claerbout, 1985).
+
+
+*Figure 1: Exploding reflector model showing exploding reflector modelSeismic Data Analysis: Processing, Inversion, and Interpretation of Seismic Data. Society of Exploration Geophysicists, Yılmaz, Ö., 2002), Geometry of zero-offset recording(left), and hypothetical simulation of the zero-offset experiment using exploding
+reflectors (right) (Claerbout, 1985).
+*
    ![exploding reflector model](images/9.png)
    * **(a) Exploding Reflector Model:** In this theoretical approach, the reflectors "explode" at $t=0$. The wave travels only **upward** to the surface. To compensate for the one-way travel time, we use **half the true medium velocity** ($V/2$).
    * **(b) Zero-Offset Model:** This represents the actual acquisition geometry where a source and receiver are co-located. The recorded time is the **two-way travel time** (downward + upward), using the **full velocity** of the medium.
