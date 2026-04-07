@@ -12,7 +12,7 @@ This repository provides a high-fidelity numerical simulation of seismic wave pr
 
 ---
 
-## 🛑 Problem Statement: The Challenge of Subsurface Imaging
+##   The Challenge of Subsurface Imaging
 
 In seismic exploration, raw data recorded at the surface does not provide a true map of the subsurface. The primary challenge is the Geometric Distortion of Dipping Reflectors and complex structures and also the presence of Diffraction Hyperbolas caused by subsurface discontinuities."**.
 
@@ -22,7 +22,7 @@ This project focuses on **Migration**: a crucial signal processing technique tha
 
 ---
 
-## 🎯 Project Objectives
+##  Project Objectives
 
 Derived from the methodology presented in my final defense (PowerPoint available in the repo), the goals are:
 1. **Geometric Modeling:** Construction of complex interfaces including Sinusoidal (folded), Flat, and Dipping (fault-like) reflectors.
@@ -32,7 +32,7 @@ Derived from the methodology presented in my final defense (PowerPoint available
 
 ---
 
-## 🧠 Connection to Machine Learning & Geophysics
+##  Connection to Machine Learning & Geophysics
 
 This framework serves as a robust **Synthetic Data Generator** for modern ML applications in Earth Science:
 - **Automatic Picking:** Training architectures like **UNet/CNN** for layered boundary detection.
@@ -40,16 +40,16 @@ This framework serves as a robust **Synthetic Data Generator** for modern ML app
 
 ---
 
-## 📊 Results: A Comparative Look
+##  Results
 
 ### Time Migration vs. Depth Migration
 Migration effectively focuses seismic energy, transforming uninterpretable time sections into a clear structural map. Note the subtle differences in layer positioning between PSTM and PSDM, highlighting the importance of proper structural imaging.
 
-| Post-Stack Time Migration (PSTM) |  Post-Stack Depth Migration (KDM) |
+| Post-Stack Time Migration (PSTM) |  Post-Stack Depth Migration (PSDM) |
 | :---: | :---: |
 | *Structural positioning in **Seconds*** | *Structural map in **Meters*** |
 | ![PSTM](images/7.png) | ![PSDM](images/10.png) |
-## 📊 Dynamic Migration Workflow Analysis
+##  Dynamic Migration Workflow Analysis
 
 The core of this seismic imaging framework is the ability to collapse diffraction energy and relocate reflections to their true spatial coordinates. The animation below demonstrates the step-by-step transition of the seismic data:
 
@@ -60,7 +60,7 @@ The core of this seismic imaging framework is the ability to collapse diffractio
 ![Seismic Migration Workflow](images/migration_comparison.gif)
 *Animation: Transition from raw data (Fig 3) to Time Migration (Fig 4) and Depth Migration (Fig 5).*
 
-## 🖼 Project Workflow & Visual Results
+##  Workflow & Visual Results
 
 ### 1. Model Geometry & Velocity Field
 The initial structural model consists of three primary reflectors: Sinusoidal, Flat, and Dipping layers.
@@ -81,7 +81,7 @@ Below is the comparison between the processed sections.
 | ![PSTM](images/7.png) | ![PSDM](images/10.png) |
 
 
-## 💡 Key Insights & Concluding Remarks
+##  Key Insights & Concluding Remarks
 
 1. **The Exploding Reflector Model (ERM) vs. Zero-Offset Mapping:**
    To simulate the seismic section, we utilized two fundamental concepts as illustrated in the provided figures:
@@ -102,5 +102,5 @@ reflectors (right) (Claerbout, 1985).
 4. **Future Enhancements:** Implementing **Pre-Stack Migration** and iterative velocity analysis would be the next step to handle strong lateral velocity variations more accurately.
 ---
 
-## 📧 Contact
+
 **Mahla Zafaryazdi Mohajer** - [mahlazafar8@gmail.com| mmphajer25@ku.edu.tr | mahla.zafar@aut.ac.ir] 
