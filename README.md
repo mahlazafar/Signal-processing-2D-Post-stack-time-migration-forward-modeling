@@ -44,12 +44,12 @@ This framework serves as a robust **Synthetic Data Generator** for modern ML app
 ## 📊 Results: A Comparative Look
 
 ### Time Migration vs. Depth Migration
-Migration effectively focuses seismic energy, transforming uninterpretable time sections into a clear structural map. Note the subtle differences in layer positioning between PSTM and KDM, highlighting the importance of proper structural imaging.
+Migration effectively focuses seismic energy, transforming uninterpretable time sections into a clear structural map. Note the subtle differences in layer positioning between PSTM and PSDM, highlighting the importance of proper structural imaging.
 
-| Post-Stack Time Migration (PSTM) | Kirchhoff Depth Migration (KDM) |
+| Post-Stack Time Migration (PSTM) |  Post-Stack Depth Migration (KDM) |
 | :---: | :---: |
 | *Structural positioning in **Seconds*** | *Structural map in **Meters*** |
-| ![PSTM](images/final_migration_time.png) | ![KDM](images/final_migration_depth.png) |
+| ![PSTM](images/7.png) | ![KDM](images/10.png) |
 ## 📊 Dynamic Migration Workflow Analysis
 
 The core of this seismic imaging framework is the ability to collapse diffraction energy and relocate reflections to their true spatial coordinates. The animation below demonstrates the step-by-step transition of the seismic data:
@@ -79,14 +79,14 @@ The exploding reflector model results in complex diffraction patterns and overla
 Below is the comparison between the processed sections.
 | Post-Stack Time Migration (PSTM) | Post-Stack Depth Migration (PSDM) |
 | :---: | :---: |
-| ![PSTM](images/7.png) | ![PSDM](images/5.png) |
+| ![PSTM](images/7.png) | ![PSDM](images/10.png) |
 
 
 ## 💡 Key Insights & Concluding Remarks
 
 1. **The Exploding Reflector Model (ERM) vs. Zero-Offset Mapping:**
    To simulate the seismic section, we utilized two fundamental concepts as illustrated in the provided figures:
-   ![exploding reflector model](images/1.png)
+   ![exploding reflector model](images/9.png)
    * **(a) Exploding Reflector Model:** In this theoretical approach, the reflectors "explode" at $t=0$. The wave travels only **upward** to the surface. To compensate for the one-way travel time, we use **half the true medium velocity** ($V/2$).
    * **(b) Zero-Offset Model:** This represents the actual acquisition geometry where a source and receiver are co-located. The recorded time is the **two-way travel time** (downward + upward), using the **full velocity** of the medium.
    * *Conclusion:* Our simulation successfully maps the complex diffraction patterns by honoring these wave propagation physics.
